@@ -55,6 +55,13 @@ app.post('/device', function (req, res) {
 	res.send("received new device");
 });
 
+app.delete('/device', function (req, res) {
+	console.log("delete device id    : " + req.body.id);
+
+    db.public.none("DELETE FROM devices WHERE device_id = '" + req.body.id + "'");
+	res.send("deleted device");
+});
+
 
 app.get('/web/device', function (req, res) {
 	var devices = db.public.many("SELECT * FROM devices").map( function(device) {

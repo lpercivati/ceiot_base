@@ -24,11 +24,22 @@ class Crud implements EventListenerObject, POSTResponseListener, DELETEResponseL
       let deviceId = <HTMLInputElement>document.getElementById("device-id");
       let deviceName = <HTMLInputElement>document.getElementById("device-name");
       let deviceKey = <HTMLInputElement>document.getElementById("device-key");
+
+      if (deviceId.value == "" || deviceName.value == "" || deviceKey.value == ""){
+        alert("Por favor ingresar todos los datos");
+        return;
+      }
+
       this.api.requestPost(deviceId.value, deviceName.value, deviceKey.value, this);
     }
     else{
-      debugger;
       let deviceId = <HTMLInputElement>document.getElementById("device-delete-id");
+
+      if (deviceId.value == ""){
+        alert("Por favor ingresar ID del dispositivo");
+        return;
+      }
+
       this.api.requestDelete(deviceId.value, this);
     }
   }

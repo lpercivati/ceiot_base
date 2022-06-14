@@ -4,12 +4,20 @@ class Crud implements EventListenerObject, POSTResponseListener, DELETEResponseL
 
 
   handlePOSTResponse(status:number, response:string):void {
-    window.location.replace("/index.html")
+    if (status == 200){
+      window.location.replace("/index.html");
+    } else {
+      alert(response);
+    }
+    
   }
 
   handleDELETEResponse(status:number, response:string):void {
-    debugger;
-    window.location.replace("/index.html")
+    if (status == 200){
+      window.location.replace("/index.html");
+    } else {
+      alert(response);
+    }
   }
 
   main():void {

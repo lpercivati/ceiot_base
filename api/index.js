@@ -51,12 +51,26 @@ app.post('/measurement', function (req, res) {
 app.post('/device', function (req, res) {
 	console.log("device id    : " + req.body.id + " name        : " + req.body.n + " key         : " + req.body.k );
 
+    var devices = db.public.many("SELECT * FROM devices WHERE device_id = '"+req.body.id+"'");
+    
+    if (devices.length > 0){
+        res.status(400).send("Device with id " + req.body.id + " already exists.")
+        return
+    }
+
     db.public.none("INSERT INTO devices VALUES ('"+req.body.id+ "', '"+req.body.n+"', '"+req.body.k+"')");
 	res.send("received new device");
 });
 
 app.delete('/device/:id', function (req, res) {
     console.log("delete device id    : " + req.params.id);
+
+    var devices = db.public.many("SELECT * FROM devices WHERE device_id = '"+req.params.id+"'");
+    
+    if (devices.length == 0){
+        res.status(404).send("Device not found")
+        return
+    }
 
     db.public.none("DELETE FROM devices WHERE device_id = '" + req.params.id + "'");
 	res.send("deleted device");

@@ -34,16 +34,10 @@ class API{
         if(xhr.status == 200) {
           listener.handlePOSTResponse(xhr.status,xhr.responseText);
         } else {
-          listener.handlePOSTResponse(xhr.status,null);
+          listener.handlePOSTResponse(xhr.status,xhr.responseText);
         }
       }
     };
-
-    let body = {
-      "id": id,
-      "n": name,
-      "k": key
-    }
 
     var params ="id="+id+"&n="+name+"&k="+key
     xhr.open("POST", "http://localhost:8080/device");
@@ -52,19 +46,17 @@ class API{
   }
 
   requestDelete(id: string, listener: DELETEResponseListener):void{
-    debugger
     let xhr:XMLHttpRequest = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
       if(xhr.readyState == 4) {
         if(xhr.status == 200) {
           listener.handleDELETEResponse(xhr.status,xhr.responseText);
         } else {
-          listener.handleDELETEResponse(xhr.status,null);
+          listener.handleDELETEResponse(xhr.status,xhr.responseText);
         }
       }
     };
 
-    //var params ="id="+id;
     xhr.open("DELETE", "http://localhost:8080/device/" + id);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.send();

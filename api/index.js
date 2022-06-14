@@ -55,10 +55,10 @@ app.post('/device', function (req, res) {
 	res.send("received new device");
 });
 
-app.delete('/device', function (req, res) {
-	console.log("delete device id    : " + req.body.id);
+app.delete('/device/:id', function (req, res) {
+    console.log("delete device id    : " + req.params.id);
 
-    db.public.none("DELETE FROM devices WHERE device_id = '" + req.body.id + "'");
+    db.public.none("DELETE FROM devices WHERE device_id = '" + req.params.id + "'");
 	res.send("deleted device");
 });
 

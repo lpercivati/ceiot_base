@@ -64,9 +64,9 @@ class API{
       }
     };
 
-    var params ="id="+id;
-    xhr.open("DELETE", "http://localhost:8080/device");
+    //var params ="id="+id;
+    xhr.open("DELETE", "http://localhost:8080/device/" + id);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhr.send(params);
+    xhr.send();
   }
 }

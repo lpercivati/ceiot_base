@@ -392,3 +392,24 @@ Sería conveniente quitar de main.c cualquier elemento variable para no afectar 
 
 Renombrar esp32 a esp32-dht11 
 
+# Anexo: CRUD
+## Objetivo
+Se realiza una nueva página crud.html que contiene las siguientes funciones:
+- Agregado de un nuevo dispositivo (id, name, key)
+- Eliminación de un nuevo dispositivo
+
+## Paso 1
+Ir a /index.html y hacer click en el botón de modificación o en su defecto ir a /crud.html
+
+## Paso 2.a: Agregado de dispositivo
+Completar el formulario con los datos del dispositivo a agregar, luego clickear en aceptar. Se validará la existencia de datos en todos los campos y que el id del dispositivo no exista en los dispositivos ya existentes en la base.
+
+## Paso 2.b: Eliminación de dispositivo
+Completar el campo con el id del dispositivo a borrar. Se validará la existencia del dato en el campo y la existencia de un dispositivo en base con ese ID.
+
+## Comentarios del desarrollo
+- /api/spa/crud.html: nuevo archivo que contiene los formularios mostrados en la página.
+- /api/spa/index.html se agregó el botón para ir a la modificación de dispositivos
+- /api/spa/ts/crud.ts archivo JavaScript que captura los eventos y valores tomados del crud.html se conecta con API.ts
+- /api/spa/ts/API.ts se agregaron nuevas funciones para POST y DELETE de dispositivos.
+- /api/index.js se agregaron funciones de borrado de dispositivo y validación en la creación de un nuevo dispositivo.

@@ -29,6 +29,8 @@ A través de Facebook e Instagram, se puede saber posibles clientes a través de
 Se observa que el dominio del mail es "@spaceguru.com".
 Ingresando en la consola del navegador se puede extraer estilos de la fuente de la página, logo, paleta de colores, etc.
 
+https://raw.githubusercontent.com/lpercivati/cibs/CIBS/ejercicio_1_ciberkillchain_ataque/reconocimiento.PNG
+
 ### 2. Weaponization
 Creación de diferentes direcciones emails por ejemplo security@5paceguru.com o security-spaceguru@gmail.com.
 Confección de templates de emails respetando estilos extraídos de la página web de la empresa.

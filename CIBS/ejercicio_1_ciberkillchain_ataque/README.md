@@ -40,16 +40,20 @@ El escenario pensado consiste en phishing:
 - Investigar otros trabajadores a través de las redes sociales
 
 ### 3. Delivery
-- Enviar mails phishing solicitando cambio de clave y enviando un link con formulario a llenar con clave actual y nueva clave.
+- Enviar mails phishing solicitando cambio de clave y enviando un link con formulario a llenar con clave actual y nueva clave a solo una víctima para no provocar conversación entre los empleados de la empresa.
 
 ### 4. Explotaition
 - El empleado entra en el link, llena el formulario poniendo clave actual y nueva clave. Al intentar guardar la nueva clave, se le informa que finalmente no era necesario renovar la misma y se le solicita que cierre la pestaña del navegador. Internamente, el click guarda los datos del formulario en un sistema propio donde el atacante puede ver la clave ingresada.
 
-### 5. Command and control
-- Al obtener el password, el atacante puede ingresar al mail de la víctima, espacio en plataforma (ej Google Drive).
+### 5. Instalation
+- El atacante obtiene usuario y contraseña de la víctima y puede loguearse en su cuenta en nube.
 
-### 6. Actions on objectives
+### 6. Command and control
+- El atacante ingresa a la cuenta de la víctima. Revisa mails, conversaciones y documentos internos de la empresa en búsqueda de información valiosa.
+
+### 7. Actions on objectives
 Posibles acciones:
 - Revisar mails en búsqueda de información sensible. Búsqueda de otras plataformas a las que se pueda loguear con las mismas credenciales: Slack (chat), Github (repositorios de código), entre otros.
 - Revisar espacio en nube en búsqueda de información sensible: calendarios, datos de clientes, usuarios y password, informes de contabilidad, documentación interna, datos de desarrollo como credenciales de otros sistemas o bases de datos.
 - Contactar soporte IT buscando información del sistema interno como URL del portal backoffice, información de servidores.
+- Obtener lista de direcciones de mail internos para propagar el phishing a otras cuentas.

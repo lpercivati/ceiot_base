@@ -56,4 +56,6 @@ Posibles acciones:
 - Revisar mails en búsqueda de información sensible. Búsqueda de otras plataformas a las que se pueda loguear con las mismas credenciales: Slack (chat), Github (repositorios de código), entre otros.
 - Revisar espacio en nube en búsqueda de información sensible: calendarios, datos de clientes, usuarios y password, informes de contabilidad, documentación interna, datos de desarrollo como credenciales de otros sistemas o bases de datos.
 - Contactar soporte IT buscando información del sistema interno como URL del portal backoffice, información de servidores.
+- Conectarse al backoffice y explorar información sensible de usuarios.
+- Conectarse a la base de datos productiva y copiar los datos de los usuarios.
 - Obtener lista de direcciones de mail internos para propagar el phishing a otras cuentas.

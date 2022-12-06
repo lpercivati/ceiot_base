@@ -43,13 +43,13 @@ El escenario pensado consiste en phishing:
 - Enviar mails phishing solicitando cambio de clave y enviando un link con formulario a llenar con clave actual y nueva clave a solo una víctima para no provocar conversación entre los empleados de la empresa.
 
 ### 4. Explotaition
-- El empleado entra en el link, llena el formulario poniendo clave actual y nueva clave. Al intentar guardar la nueva clave, se le informa que finalmente no era necesario renovar la misma y se le solicita que cierre la pestaña del navegador. Internamente, el click guarda los datos del formulario en un sistema propio donde el atacante puede ver la clave ingresada.
+- El empleado entra en el link, llena el formulario poniendo clave actual y nueva clave. El click guarda los datos del formulario en un sistema propio donde el atacante puede ver la clave ingresada. Paralelamente, solicita cambio de clave al sistema real.
 
 ### 5. Instalation
 - El atacante obtiene usuario y contraseña de la víctima y puede loguearse en su cuenta en nube.
 
 ### 6. Command and control
-- El atacante ingresa a la cuenta de la víctima. Revisa mails, conversaciones y documentos internos de la empresa en búsqueda de información valiosa.
+- El atacante ingresa a la cuenta de la víctima.
 
 ### 7. Actions on objectives
 Posibles acciones:
